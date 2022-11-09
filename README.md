@@ -55,15 +55,8 @@ npm run dev
 
 ### Launch the backend
 
-1)	Within terminal or cmd ensure you have navigated inside the 'Backend' directory and installed the dependencies
+1)	Run nodemon server.js
 
 ```
-cd ../path/to/Backend 
-yarn install OR npm install
-```
-
-2) Run the start script
-
-``` 
-yarn run start OR npm run start
+nodemon ./api/server.js
 ```
