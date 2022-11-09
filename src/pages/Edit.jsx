@@ -16,7 +16,7 @@ const EditNoteForm = () => {
     const [currentNote, setCurrentNote] = useState({ title: '', note: '' });
     // pengambilan data dilakukan setelah DOM diupdate shg pakai useEffect()
     useEffect(() => {
-        const notes = getLocalStorageData('notes')
+        const notes = getLocalStorageData('notes');
         setAllNotes(notes);
         // mengambil noteId dari location
         const noteId = location.pathname.replace('/edit/', '');
@@ -45,6 +45,7 @@ const EditNoteForm = () => {
         });
         localStorage.setItem('notes', JSON.stringify(newNotes));
         e.preventDefault();
+        history.push('/');
     };
     const handleDeleteNote = (e) => {
         const newNotes = allNotes.filter((note) => note.id !== currentNote.id);
